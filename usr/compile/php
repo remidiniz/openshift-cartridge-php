@@ -35,6 +35,8 @@ function install_php() {
         --with-pdo-pgsql \
         --with-openssl \
         --with-xmlrpc \
+        --with-memcache \
+        --with-memcached \
         --with-xsl \
         --with-bz2 \
         --with-gettext \
@@ -67,8 +69,10 @@ function install_php() {
         --enable-sysvshm \
         --enable-sysvmsg \
         --enable-intl \
-        --enable-opcache
-
+        --enable-opcache \
+        --enable-memcache \
+        --enable-memcached
+        
     echo "Compiling PHP."
     make install
 
